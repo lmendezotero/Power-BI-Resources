@@ -3,9 +3,9 @@
 Calculated table joins are used to combine two or more tables of data. Common examples include CROSSJOIN, UNION, EXCEPT and INTERSECT.
 
 Common use cases:
-•	Blending or combining data across multiple tables.
-•	Creating advanced calculations like new vs returning users or repeat purchase behavior.
-•	Querying tables to troubleshoot or better understand relationships in a data model.
+* Blending or combining data across multiple tables.
+* Creating advanced calculations like new vs returning users or repeat purchase behavior.
+* Querying tables to troubleshoot or better understand relationships in a data model.
 
 #### 1. CROSSJOIN()
 Returns a table that contains the cartesian (product of two sets, formatting a new set containing all ordered pairs) product of the specified tables.
