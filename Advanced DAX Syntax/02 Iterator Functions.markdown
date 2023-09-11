@@ -1,8 +1,8 @@
 ## Advanced DAX Interator Functions
 Iterator functions allow you to loop through the same expression on every row of a table in order to evaluate a single scalar value or derive a new table.
 Common use cases:
-•	Aggregating a column into a single value.
-•	Returning a table of data.
+* Aggregating a column into a single value.
+* Returning a table of data.
 
 
 #### 1. SUMX()
