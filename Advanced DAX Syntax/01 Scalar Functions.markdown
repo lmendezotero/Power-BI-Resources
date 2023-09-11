@@ -2,6 +2,8 @@
 
 Scalar functions return a single value, rather than a column or table.
 
+![alt text](https://github.com/lmendezotero/Power-BI-Resources/blob/main/Advanced%20DAX%20Syntax/Pictures/Scalar_Functions.png)
+
 ### A. Aggregation Functions
 
 #### 1. SUM()
