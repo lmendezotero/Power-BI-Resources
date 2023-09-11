@@ -18,20 +18,21 @@ Syntax for CONCATENATEX():
 = CONCATENATE(Table, Expression, [Delimiter], [OrderBy_Expression], [Order])
 
 Example of the "Full Name Employee" measure with CONCATENATEX():
-/***************************************************/
-Employee Full Name = 
-IF(
-    HASONEVALUE('Employee Lookup'[first_name]),
-    CONCATENATEX(
-    'Employee Lookup',
-    'Employee Lookup'[first_name] & " " & 'Employee Lookup'[last_name],
-    ",",
-    'Employee Lookup'[first_name],
-    ASC
-    ),
-    BLANK()
-)
-/***************************************************/
+
+
+    Employee Full Name = 
+    IF(
+        HASONEVALUE('Employee Lookup'[first_name]),
+        CONCATENATEX(
+        'Employee Lookup',
+        'Employee Lookup'[first_name] & " " & 'Employee Lookup'[last_name],
+        ",",
+        'Employee Lookup'[first_name],
+        ASC
+        ),
+        BLANK()
+    )
+
 
 #### 3. AVERAGEX() 
 It calculates the average (arithmetic mean) of a set of expressions evaluated over a table.
@@ -42,30 +43,30 @@ Syntax for AVERAGEX():
 Important Note! AVERAGE & AVERAGEX do not count dates with zero sales when computing an average. To evaluate an average over a date range that includes dates with no sales, use DIVIDE & COUNTROWS instead.
 
 Example of the calculation of "Moving Average" with AVERAGEX():
-/***************************************************/
-Moving Average = 
-VAR LastTransactionDate = MAX('Calendar'[Transaction_Date])
-VAR AverageDay = 30
-VAR PeriodInVisual = 
-FILTER(
-    ALL('Calendar'[Transaction_Date]),
-    AND(
-        'Calendar'[Transaction_Date] > LastTransactionDate - AverageDay,
-        'Calendar'[Transaction_Date] <= LastTransactionDate
-    )
-)
-VAR Output = 
-CALCULATE(
-    AVERAGEX(
-        'Calendar',
-        [Customer Sales]
-    ),
-    PeriodInVisual
-)
 
-RETURN
-Output
-/***************************************************/
+    Moving Average = 
+    VAR LastTransactionDate = MAX('Calendar'[Transaction_Date])
+    VAR AverageDay = 30
+    VAR PeriodInVisual = 
+    FILTER(
+        ALL('Calendar'[Transaction_Date]),
+        AND(
+            'Calendar'[Transaction_Date] > LastTransactionDate - AverageDay,
+            'Calendar'[Transaction_Date] <= LastTransactionDate
+        )
+    )
+    VAR Output = 
+    CALCULATE(
+        AVERAGEX(
+            'Calendar',
+            [Customer Sales]
+        ),
+        PeriodInVisual
+    )
+
+    RETURN
+    Output
+
 
 #### 4. RANKX()
 It returns the ranking of a number in a list of numbers for each row in the table argument.
@@ -74,15 +75,14 @@ Syntax for AVERAGEX():
 = RANKX(Table, Expression, [Value], [Order], [Ties])
 
 Example of ranking calculation with RANKX() avoinding values in the Total of the visual:
-/***************************************************/
-Rank of Customer Sales = 
-IF(
-    HASONEVALUE('Product Lookup'[product_category]),
-    RANKX(
-    ALL(
-        'Product Lookup'[product_category]
-    ),
-    [Customer Sales]
-)
-)
-/***************************************************/
+
+    Rank of Customer Sales = 
+        IF(
+            HASONEVALUE('Product Lookup'[product_category]),
+            RANKX(
+            ALL(
+                'Product Lookup'[product_category]
+            ),
+            [Customer Sales]
+        )
+    )
