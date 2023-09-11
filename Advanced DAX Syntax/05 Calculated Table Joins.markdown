@@ -81,6 +81,9 @@ Some examples about tables created using UNION():
 
 #### 3. EXCEPT() 
 It returns all rows from the left table which do not appear in the right table.
+
+![alt text](https://github.com/lmendezotero/Power-BI-Resources/blob/main/Advanced%20DAX%20Syntax/Pictures/EXCEPT_Result.png)
+
 Syntax for EXCEPT():
 
 = EXCEPT(LeftTable, RightTable)
@@ -103,6 +106,9 @@ Some examples about tables created using EXCEPT():
 
 #### 3. INTERSECT()
 It returns all the rows from the left table which also appear in the right table.
+
+![alt text](https://github.com/lmendezotero/Power-BI-Resources/blob/main/Advanced%20DAX%20Syntax/Pictures/INTERSECT_Result.png)
+
 Syntax for INTERSECT():
 
 = INTERSECT (LeftTable, RightTable)
