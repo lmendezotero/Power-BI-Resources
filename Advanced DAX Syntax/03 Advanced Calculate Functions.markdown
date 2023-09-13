@@ -37,7 +37,7 @@ In general, the DAX engine evaluates the formulas in the following way when CALC
 
 However, when modifiers are applied, the evaluation order changes and the DAX engine will check firstly the modifiers, then the filters and finally the expression.
 
-![alt text](https://github.com/lmendezotero/Power-BI-Resources/blob/main/Advanced%20DAX%20Syntax/Pictures/Context_transition_measures.png)
+![alt text](https://github.com/lmendezotero/Power-BI-Resources/blob/main/Advanced%20DAX%20Syntax/Pictures/Evaluation_Order.png)
 Source: Maven Analytics.
 
 So, modifiers are used to alter the way CALCULATE creates filter context and are added as filter arguments within a CALCULATE function. Modifers are also used to access inactive table relationships or change the way filters propagate (one-way to bidirectional or biceversa).
