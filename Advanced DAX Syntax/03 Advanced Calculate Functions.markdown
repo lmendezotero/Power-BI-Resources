@@ -53,8 +53,8 @@ For example, outside CALCULATE we can use ALL to create a table with unique valu
 
 Hovewer, inside CALCULATE, ALL is a modifier and it will return all the values from column or all the rows from table ignoring all the filters applied (both in visuals and in tables).
 
-![alt text](https://github.com/lmendezotero/Power-BI-Resources/blob/main/Advanced%20DAX%20Syntax/Pictures/Context_transition_measures.png)
-Source: Maven Analytics.
+![alt text](https://github.com/lmendezotero/Power-BI-Resources/blob/main/Advanced%20DAX%20Syntax/Pictures/ALL_Example.png)
+
 
 #### REMOVEFILTERS()
 REMOVEFILTERS returns all the rows from a table or all the values from several columns ignoring any applied filter.
