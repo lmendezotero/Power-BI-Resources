@@ -9,13 +9,13 @@ Common use cases:
 Returns the sum of an expression evaluated for each row in a table.
 Syntax for SUMX():
 
-= SUMX(Table, Expression)
+    = SUMX(Table, Expression)
 
 #### 2. CONCATENATEX()
 It evaluates an expression for each row of the table and returns the concatenation of those values in a single string, separated by a delimiter.
 Syntax for CONCATENATEX():
 
-= CONCATENATE(Table, Expression, [Delimiter], [OrderBy_Expression], [Order])
+    = CONCATENATE(Table, Expression, [Delimiter], [OrderBy_Expression], [Order])
 
 Example of the "Full Name Employee" measure with CONCATENATEX():
 
@@ -38,7 +38,7 @@ Example of the "Full Name Employee" measure with CONCATENATEX():
 It calculates the average (arithmetic mean) of a set of expressions evaluated over a table.
 Syntax for AVERAGEX():
 
-= AVERAGEX (Table, Expression)
+    = AVERAGEX (Table, Expression)
 
 Important Note! AVERAGE & AVERAGEX do not count dates with zero sales when computing an average. To evaluate an average over a date range that includes dates with no sales, use DIVIDE & COUNTROWS instead.
 
@@ -72,7 +72,7 @@ Example of the calculation of "Moving Average" with AVERAGEX():
 It returns the ranking of a number in a list of numbers for each row in the table argument.
 Syntax for AVERAGEX():
 
-= RANKX(Table, Expression, [Value], [Order], [Ties])
+    = RANKX(Table, Expression, [Value], [Order], [Ties])
 
 Example of ranking calculation with RANKX() avoinding values in the Total of the visual:
 

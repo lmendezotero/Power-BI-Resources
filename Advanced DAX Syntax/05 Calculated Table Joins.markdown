@@ -11,7 +11,7 @@ Common use cases:
 Returns a table that contains the cartesian (product of two sets, formatting a new set containing all ordered pairs) product of the specified tables.
 Syntax for CROSSJOIN():
 
-= CROSSJOIN(Table, Table, […])
+    = CROSSJOIN(Table, Table, […])
 
 Some examples about tables created using CROSSJOIN():
 
@@ -33,7 +33,7 @@ Some examples about tables created using CROSSJOIN():
 It combines or “stacks” rows from two or more tables sharing the same column structure.
 Syntax for UNION():
 
-= UNION(Table, Table, […])
+    = UNION(Table, Table, […])
 
 Important Note! UNION stacks tables together, just like append!
 
@@ -86,7 +86,7 @@ It returns all rows from the left table which do not appear in the right table.
 
 Syntax for EXCEPT():
 
-= EXCEPT(LeftTable, RightTable)
+    = EXCEPT(LeftTable, RightTable)
 
 As we can see, using the EXCEPT function is a similar way of obtaining the same table but with some filters applied. 
 
@@ -111,7 +111,7 @@ It returns all the rows from the left table which also appear in the right table
 
 Syntax for INTERSECT():
 
-= INTERSECT (LeftTable, RightTable)
+    = INTERSECT (LeftTable, RightTable)
 
 Some examples about tables created using INTERSECT()
 
