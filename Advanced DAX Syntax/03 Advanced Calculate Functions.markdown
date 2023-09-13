@@ -4,11 +4,13 @@
 
 An expanded table consists of the base table (which is visible to the user) along with columns from any related table connected via a 1-to-1 or many-to-1 relationship.
 
-
+![alt text](https://github.com/lmendezotero/Power-BI-Resources/blob/main/Advanced%20DAX%20Syntax/Pictures/Expanded_Tables_1.png)
+Source: Maven Analytics.
 
 Expanded tables in data models always go from the MANY side (fact tables) to the ONE side (look up table) of the relationship.
 
-
+![alt text](https://github.com/lmendezotero/Power-BI-Resources/blob/main/Advanced%20DAX%20Syntax/Pictures/Expanded_Tables_2.png)
+Source: Maven Analytics.
 
 In the previous example, the expanded version of the AW_Sales table contains all fields from the product, subcategory and category lookup tables.
 
@@ -19,8 +21,14 @@ Context transition is the process of turning row context into filter context.
 * By default, calculated columns understand row context but not filter context.
 * To create filter context at the row-level, you can use CALCULATE.
 
+![alt text](https://github.com/lmendezotero/Power-BI-Resources/blob/main/Advanced%20DAX%20Syntax/Pictures/Context_transition_calculated_columns.png)
+Source: Maven Analytics.
+
 #### 2.1 Context Transition in Measures
 In measures, Context transition is automatically applied. So, if we include the formula of SUM(ColumnName) without CALCULATE into a measure, we will get the same results as include CALCULATE becuase the DAX engine calculates the Filter Context to get the correct results. 
+
+![alt text](https://github.com/lmendezotero/Power-BI-Resources/blob/main/Advanced%20DAX%20Syntax/Pictures/Context_transition_measures.png)
+Source: Maven Analytics.
 
 ### 3. Evaluation Order & Modifiers
 In general, the DAX engine evaluates the formulas in the following way when CALCULATE is applied:
@@ -28,6 +36,9 @@ In general, the DAX engine evaluates the formulas in the following way when CALC
 * Second it evaluates the expressions.
 
 However, when modifiers are applied, the evaluation order changes and the DAX engine will check firstly the modifiers, then the filters and finally the expression.
+
+![alt text](https://github.com/lmendezotero/Power-BI-Resources/blob/main/Advanced%20DAX%20Syntax/Pictures/Context_transition_measures.png)
+Source: Maven Analytics.
 
 So, modifiers are used to alter the way CALCULATE creates filter context and are added as filter arguments within a CALCULATE function. Modifers are also used to access inactive table relationships or change the way filters propagate (one-way to bidirectional or biceversa).
 
@@ -42,6 +53,8 @@ For example, outside CALCULATE we can use ALL to create a table with unique valu
 
 Hovewer, inside CALCULATE, ALL is a modifier and it will return all the values from column or all the rows from table ignoring all the filters applied (both in visuals and in tables).
 
+![alt text](https://github.com/lmendezotero/Power-BI-Resources/blob/main/Advanced%20DAX%20Syntax/Pictures/Context_transition_measures.png)
+Source: Maven Analytics.
 
 #### REMOVEFILTERS()
 REMOVEFILTERS returns all the rows from a table or all the values from several columns ignoring any applied filter.
